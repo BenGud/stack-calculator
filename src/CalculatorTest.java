@@ -1,6 +1,8 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
+
 public class CalculatorTest {
     private final Calculator calc = new Calculator();
     
@@ -8,13 +10,13 @@ public class CalculatorTest {
     public void testEmptyStack() {
         assertEquals("[].", calc.toString());
     }
-    
+   
     @Test
     public void testLoadConstant() {
         calc.loadConstant(3);
         assertEquals("[3].", calc.toString());
     }
-    
+    @Ignore
     @Test
     public void testLoadConstants() {
         calc.loadConstant(3);
@@ -22,7 +24,7 @@ public class CalculatorTest {
         calc.loadConstant(2);
         assertEquals("[3 7 2].", calc.toString());
     }
-    
+    @Ignore
     @Test
     public void testAdd() {
         calc.loadConstant(5);
@@ -33,7 +35,7 @@ public class CalculatorTest {
         calc.add();
         assertEquals("[12].", calc.toString());
     }
-    
+    @Ignore
     @Test
     public void testSubtract() {
         calc.loadConstant(5);
@@ -44,7 +46,7 @@ public class CalculatorTest {
         calc.subtract();
         assertEquals("[-2].", calc.toString());
     }
-    
+    @Ignore
     @Test
     public void testMultiply() {
         calc.loadConstant(5);
@@ -55,7 +57,7 @@ public class CalculatorTest {
         calc.multiply();
         assertEquals("[60].", calc.toString());
     }
-    
+    @Ignore
     @Test
     public void testDivide() {
         calc.loadConstant(15);
@@ -66,7 +68,7 @@ public class CalculatorTest {
         calc.divide();
         assertEquals("[1].", calc.toString());
     }
-    
+    @Ignore
     @Test
     public void testTotal() {
         calc.loadConstant(1);
